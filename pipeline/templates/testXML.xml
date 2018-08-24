@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<file>
+  <headers>{% for head in header %}{{head}}{% if not loop.last %},{% endif %}{% endfor %}</headers>
+  <data>{% for datum in data %}
+    <record>
+    {% for peice in datum %}<{{header[loop.index-1].replace(" ","_")}}>{{peice}}</{{header[loop.index-1].replace(" ","_")}}> {% endfor %}
+    </record>{% endfor %}
+  </data>
+</file>

@@ -1,0 +1,8 @@
+<html>
+<body>
+<table>
+    <tr>{% for head in header %}<th>{{head}}</th>{% endfor %}</tr>
+    {% for datum in data %}<tr>{% for peice in datum %}<td>{{peice}}</td>{% endfor %}</tr>
+    {% endfor %}</table>
+</body>
+</html>

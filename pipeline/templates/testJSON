@@ -1,0 +1,9 @@
+{
+  "headers":[{% for head in header %}"{{head}}"{% if not loop.last %},{% endif %}{% endfor %}],
+  "data":[
+  {% for datum in data %}
+  {
+      {% for peice in datum %}"{{header[loop.index-1]}}":"{{peice}}"{% if not loop.last %},{% endif %}{% endfor %}
+  }{% if not loop.last %},{% endif %}{% endfor %}
+  ]
+}
